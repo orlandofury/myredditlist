@@ -11,12 +11,4 @@ public class RedditMainList extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_reddit_main_list);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.reddit_main_list, menu);
-		return true;
-	}
-
 }
