@@ -27,6 +27,7 @@ public class Processor {
 			item.title = data.getString("title");
 			
 			items.add(item);
+			ReditDBManager.instance().save(item);
 		}
 		
 		return items;
