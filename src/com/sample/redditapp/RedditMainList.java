@@ -62,8 +62,11 @@ public class RedditMainList extends SherlockFragmentActivity {
 						Log.d("OCFS - Error",
 								"This error happend: "
 										+ error.getLocalizedMessage());
-						Toast.makeText(RedditMainList.this, "Error happened",
-								Toast.LENGTH_LONG).show();
+						//Toast.makeText(RedditMainList.this, "Error happened",Toast.LENGTH_LONG).show();
+						//Cargar datos de cache
+						List<RedditItem> items = ItemDBManager.instance(getBaseContext()).loadCachedData();
+						Log.d("OCFS - Error","Items loaded from sqlite: " + items.size());
+						adapter.setItems(items);
 					}
 				});
 
