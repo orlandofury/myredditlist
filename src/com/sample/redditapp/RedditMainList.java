@@ -43,7 +43,7 @@ public class RedditMainList extends SherlockFragmentActivity {
 					public void onResponse(JSONObject response) {
 						try {
 
-							List<RedditItem> items = Processor.process(response);
+							List<RedditItem> items = Processor.process(getBaseContext(), response);
 							// actualizando items que obtenemos y asignando al
 							// adapter
 							adapter.setItems(items);

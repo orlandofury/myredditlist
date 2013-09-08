@@ -86,7 +86,7 @@ public class RedditItemAdapter extends BaseAdapter {
 		RedditItem item = getItem(position);
 		textAuthor.setText(item.author);
 		textDescription.setText(item.title);
-		if(item.thumbnail!=null && !item.thumbnail.equals("default"));
+		if(item.thumbnail!=null && !item.thumbnail.equals("default"))
 		{
 		  imagePost.setDefaultImageResId(R.drawable.ic_launcher);
 		  imagePost.setImageUrl(item.thumbnail, loader);
