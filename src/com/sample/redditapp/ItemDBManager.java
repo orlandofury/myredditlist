@@ -37,6 +37,7 @@ public class ItemDBManager {
 		values.put(ItemColumns.THUMBNAIL, item.thumbnail);
 		values.put(ItemColumns.TITLE, item.title);
 		long id = db.insert(Tables.ITEM, null, values);
+		db.close();
 		return id > 0;
 	}
 
